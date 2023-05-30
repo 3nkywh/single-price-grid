@@ -15,9 +15,9 @@
 
 ### Links
 
-[Vercel](https://single-price-grid-seven-teal.vercel.app)
+- [Vercel](https://single-price-grid-seven-teal.vercel.app)
 
 ## Author
 
-[Github](https://github.com/3nkywh)
-[Frontend Mentor](https://www.frontendmentor.io/profile/3nkywh)
+- [Github](https://github.com/3nkywh)
+- [Frontend Mentor](https://www.frontendmentor.io/profile/3nkywh)
