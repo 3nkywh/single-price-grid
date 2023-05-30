@@ -1,0 +1,167 @@
+@use 'base';
+
+.pricing {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 45% 1fr;
+  grid-template-areas: 
+    "information information"
+    "cost about";
+  width: 640px;
+  height: 470px;
+  margin: auto 0;
+}
+
+.pricing__information {
+  @extend %flex-space; 
+
+  grid-area: information;
+  padding: 40px;
+  border-radius: 10px 10px 0 0;
+  background-color: base.$color-white;
+}
+
+.pricing__cost {
+  @extend %flex-space; 
+  
+  grid-area: cost;
+  padding: 40px;
+  border-radius: 0 0 0 10px;
+  background-color: base.$color-cyan;
+  color: base.$color-white;
+}
+
+.pricing__about {
+  @extend %flex-space; 
+
+  grid-area: about;
+  padding: 40px;
+  border-radius: 0 0 10px 0;
+  background-color: base.$color-alphacyan;
+  color: base.$color-white;
+}
+
+.information__title {
+  font-family: base.$font-bold;
+  font-size: 1.5rem;
+  color: base.$color-cyan;
+}
+
+.information__subtitle {
+  font-family: base.$font-bold;
+  font-size: 1.1rem;
+  color: base.$color-yellow;
+}
+
+.information__text {
+  margin-top: -10px;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: base.$color-grayish;
+}
+
+.cost__title {
+  font-family: base.$font-bold;
+  font-size: 1.1rem;
+}
+
+.cost__container {
+  margin-top: -15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.cost__price {
+  font-family: base.$font-bold;
+  font-size: 2rem;
+}
+
+.cost__duration {
+  font-size: 1rem;
+  color: hsla(360, 100%, 100%, 0.5);
+}
+.cost__offer {
+  margin-top: -25px;
+  font-size: 1rem;
+}
+
+.cost__button {
+  height: 45px;
+  border-radius: 5px;
+  box-shadow: 1px 2px 6px hsla(360, 100%, 1%, 0.3);
+  font-family: base.$font-bold;
+  font-size: 1rem;
+  background-color: base.$color-yellow;
+  color: base.$color-white;
+}
+
+.about__title {
+  font-family: base.$font-bold;
+  font-size: 1.1rem;
+}
+
+.about__list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  list-style: none;
+}
+
+.about__item {
+  font-size: 0.85rem;
+  color: hsla(360, 100%, 100%, 0.75);
+}
+
+@media (max-width: 650px) {
+  html, body {
+    height: max(750px, 100vh);
+  }
+
+  .pricing {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 37% 1fr 1fr;
+    grid-template-areas: 
+      "information"
+      "cost"
+      "about"
+    ;
+    width: 320px;
+    height: 730px;
+  }
+
+  .pricing__information {
+    padding: 30px;
+    border-radius: 5px 5px 0 0;
+  }
+
+  .pricing__cost {
+    padding: 30px;
+    border-radius: 0 0 0 0;
+  }
+
+  .pricing__about {
+    padding: 30px;
+    border-radius: 0 0 5px 5px;
+  }
+
+  .information__title { font-size: 1.25rem; }
+
+  .information__subtitle { font-size: 0.95rem; }
+
+  .information__text { 
+    font-size: 0.85rem; 
+    line-height: 2;
+  }
+
+  .cost__duration { font-size: 0.95rem; }
+
+  .cost__offer { font-size: 0.95rem; }
+}
+
+@media (orientation: landscape) {
+  html, body {
+    height: max(480px, 100vh);
+  }
+}

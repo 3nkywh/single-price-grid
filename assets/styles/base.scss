@@ -1,0 +1,43 @@
+@font-face {
+  font-family: "karla-regular";
+  src: url(../fonts/Karla-Regular.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "karla-bold";
+  src: url(../fonts/Karla-Bold.ttf);
+  font-weight: 700;
+}
+
+$font-regular: "karla-regular";
+$font-bold: "karla-bold";
+$color-cyan: hsl(179, 62%, 43%);
+$color-alphacyan: hsla(179, 62%, 43%, 0.8);
+$color-yellow: hsl(71, 73%, 54%);
+$color-gray: hsl(204, 43%, 93%);
+$color-grayish: hsl(218, 22%, 67%);
+$color-white: hsl(360, 100%, 100%);
+
+* {
+  margin: 0px;
+  padding: 0px;
+  border: none;
+  box-sizing: border-box;
+  font-family: $font-regular;
+}
+
+html, body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: max(340px, 100vw);
+  height: 100vh;
+  background-color: $color-gray;
+}
+
+%flex-space {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

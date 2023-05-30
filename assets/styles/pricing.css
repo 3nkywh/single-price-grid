@@ -1,0 +1,185 @@
+@font-face {
+  font-family: "karla-regular";
+  src: url(../fonts/Karla-Regular.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: "karla-bold";
+  src: url(../fonts/Karla-Bold.ttf);
+  font-weight: 700;
+}
+* {
+  margin: 0px;
+  padding: 0px;
+  border: none;
+  box-sizing: border-box;
+  font-family: "karla-regular";
+}
+
+html, body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: max(340px, 100vw);
+  height: 100vh;
+  background-color: hsl(204, 43%, 93%);
+}
+
+.pricing__information, .pricing__cost, .pricing__about {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.pricing {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 45% 1fr;
+  grid-template-areas: "information information" "cost about";
+  width: 640px;
+  height: 470px;
+  margin: auto 0;
+}
+
+.pricing__information {
+  grid-area: information;
+  padding: 40px;
+  border-radius: 10px 10px 0 0;
+  background-color: hsl(0, 100%, 100%);
+}
+
+.pricing__cost {
+  grid-area: cost;
+  padding: 40px;
+  border-radius: 0 0 0 10px;
+  background-color: hsl(179, 62%, 43%);
+  color: hsl(0, 100%, 100%);
+}
+
+.pricing__about {
+  grid-area: about;
+  padding: 40px;
+  border-radius: 0 0 10px 0;
+  background-color: hsla(179, 62%, 43%, 0.8);
+  color: hsl(0, 100%, 100%);
+}
+
+.information__title {
+  font-family: "karla-bold";
+  font-size: 1.5rem;
+  color: hsl(179, 62%, 43%);
+}
+
+.information__subtitle {
+  font-family: "karla-bold";
+  font-size: 1.1rem;
+  color: hsl(71, 73%, 54%);
+}
+
+.information__text {
+  margin-top: -10px;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: hsl(218, 22%, 67%);
+}
+
+.cost__title {
+  font-family: "karla-bold";
+  font-size: 1.1rem;
+}
+
+.cost__container {
+  margin-top: -15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.cost__price {
+  font-family: "karla-bold";
+  font-size: 2rem;
+}
+
+.cost__duration {
+  font-size: 1rem;
+  color: hsla(0, 100%, 100%, 0.5);
+}
+
+.cost__offer {
+  margin-top: -25px;
+  font-size: 1rem;
+}
+
+.cost__button {
+  height: 45px;
+  border-radius: 5px;
+  box-shadow: 1px 2px 6px hsla(0, 100%, 1%, 0.3);
+  font-family: "karla-bold";
+  font-size: 1rem;
+  background-color: hsl(71, 73%, 54%);
+  color: hsl(0, 100%, 100%);
+}
+
+.about__title {
+  font-family: "karla-bold";
+  font-size: 1.1rem;
+}
+
+.about__list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  list-style: none;
+}
+
+.about__item {
+  font-size: 0.85rem;
+  color: hsla(0, 100%, 100%, 0.75);
+}
+
+@media (max-width: 650px) {
+  html, body {
+    height: max(750px, 100vh);
+  }
+  .pricing {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 37% 1fr 1fr;
+    grid-template-areas: "information" "cost" "about";
+    width: 320px;
+    height: 730px;
+  }
+  .pricing__information {
+    padding: 30px;
+    border-radius: 5px 5px 0 0;
+  }
+  .pricing__cost {
+    padding: 30px;
+    border-radius: 0 0 0 0;
+  }
+  .pricing__about {
+    padding: 30px;
+    border-radius: 0 0 5px 5px;
+  }
+  .information__title {
+    font-size: 1.25rem;
+  }
+  .information__subtitle {
+    font-size: 0.95rem;
+  }
+  .information__text {
+    font-size: 0.85rem;
+    line-height: 2;
+  }
+  .cost__duration {
+    font-size: 0.95rem;
+  }
+  .cost__offer {
+    font-size: 0.95rem;
+  }
+}
+@media (orientation: landscape) {
+  html, body {
+    height: max(480px, 100vh);
+  }
+}
